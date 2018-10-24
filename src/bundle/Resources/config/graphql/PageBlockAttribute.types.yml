@@ -1,0 +1,33 @@
+PageBlockAttribute:
+    type: interface
+    config:
+        fields:
+            id:
+                type: String
+            name:
+                type: String
+            value:
+                type: String
+        resolveType: "@=resolver('PageBlockAttributeType', [value, context])"
+
+BasePageBlockAttribute:
+    type: object
+    config:
+        interfaces: [PageBlockAttribute]
+        fields:
+            id:
+                type: String
+            name:
+                type: String
+            value:
+                type: String
+
+EmbedPageBlockAttribute:
+    type: object
+    inherits: [BasePageBlockAttribute]
+    config:
+        interfaces:
+            - PageBlockAttribute
+        fields:
+            content:
+                type: Content

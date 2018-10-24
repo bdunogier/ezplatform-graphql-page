@@ -1,3 +1,0 @@
-bd_platform_page_graph_ql_homepage:
-    path:     /
-    defaults: { _controller: BDPlatformPageGraphQLBundle:Default:index }

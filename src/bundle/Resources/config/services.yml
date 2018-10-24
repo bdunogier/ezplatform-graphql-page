@@ -1,4 +1,14 @@
 services:
-#    bd_platform_page_graph_ql.example:
-#        class: BD\PlatformPageGraphQLBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    BD\PlatformPageGraphQL\GraphQL\PageFieldValueBuilder:
+        tags:
+            - { name: ezplatform_graphql.field_value_builder, type: 'ezpage'}
+
+    BD\PlatformPageGraphQL\GraphQL\PageResolver:
+        tags:
+            - { name: overblog_graphql.resolver, alias: "PageBlockAttributeType", method: "resolvePageBlockAttributeType" }
+            - { name: overblog_graphql.resolver, alias: "PageBlockAttributes", method: "resolvePageBlockAttributes" }

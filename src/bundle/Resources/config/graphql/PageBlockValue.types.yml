@@ -1,0 +1,25 @@
+PageBlockValue:
+    type: object
+    config:
+        fields:
+            id:
+                type: String
+            type:
+                type: String
+            name:
+                type: String
+            view:
+                type: String
+            class:
+                type: String
+            style:
+                type: String
+            compiled:
+                type: String
+            since:
+                type: DateTime
+            till:
+                type: DateTime
+            attributes:
+                type: "[PageBlockAttribute]"
+                resolve: "@=resolver('PageBlockAttributes', [value, context])"
