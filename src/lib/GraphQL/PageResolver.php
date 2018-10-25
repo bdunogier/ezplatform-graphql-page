@@ -18,12 +18,20 @@ class PageResolver
      */
     private $blockDefinitionFactory;
 
-    private $attributesTypesMap = [];
+    private $attributesTypesMap = [
+        'embed' => 'PageBlockAttributeEmbed',
+    ];
 
-    public function __construct(TypeResolver $typeResolver, BlockDefinitionFactory $blockDefinitionFactory)
-    {
+    private $blocksTypesMap = [];
+
+    public function __construct(
+        TypeResolver $typeResolver,
+        BlockDefinitionFactory $blockDefinitionFactory,
+        array $blocksTypesMap = []
+    ) {
         $this->typeResolver = $typeResolver;
         $this->blockDefinitionFactory = $blockDefinitionFactory;
+        $this->blocksTypesMap = $blocksTypesMap;
     }
 
     public function resolvePageBlockAttributes(BlockValue $blockValue, $context)
@@ -35,13 +43,21 @@ class PageResolver
 
     public function resolvePageBlockAttributeType(PageAttribute $blockAttribute, $context)
     {
-
         $attributeDefinition = $this->getBlockAttributeDefinition($context, $blockAttribute->getName());
         $attributeType = $attributeDefinition->getType();
 
         return isset($this->attributesTypesMap[$attributeType])
             ? $this->typeResolver->resolve($this->attributesTypesMap[$attributeType])
             : $this->typeResolver->resolve('BasePageBlockAttribute');
+    }
+
+    public function resolvePageBlockType(BlockValue $blockValue)
+    {
+        $blockType = $blockValue->getType();
+
+        return isset($this->blocksTypesMap[$blockType])
+            ? $this->typeResolver->resolve($this->blocksTypesMap[$blockType])
+            : $this->typeResolver->resolve('BasePageBlock');
     }
 
     /**

@@ -1,0 +1,44 @@
+PageBlock:
+    type: interface
+    config:
+        resolveType: "@=resolver('PageBlockType', [value])"
+        fields:
+            _properties:
+                type: PageBlockProperties
+
+BasePageBlock:
+    type: object
+    config:
+        interfaces: [PageBlock]
+        fields:
+            _properties:
+                type: PageBlockProperties
+                resolve: "@=value"
+            html:
+                type: String
+
+PageBlockProperties:
+    type: object
+    config:
+        fields:
+            id:
+                type: String
+            type:
+                type: String
+            name:
+                type: String
+            view:
+                type: String
+            class:
+                type: String
+            style:
+                type: String
+            compiled:
+                type: String
+            since:
+                type: DateTime
+            till:
+                type: DateTime
+            #attributes:
+            #    type: "[PageBlockAttribute]"
+            #    resolve: "@=resolver('PageBlockAttributes', [value, context])"

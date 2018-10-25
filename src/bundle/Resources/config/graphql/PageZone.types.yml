@@ -7,4 +7,4 @@ PageZone:
             name:
                 type: String
             blocks:
-                type: "[PageBlockValue]"
+                type: "[PageBlock]"

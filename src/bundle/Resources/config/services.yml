@@ -7,8 +7,14 @@ services:
     BD\PlatformPageGraphQL\GraphQL\PageFieldValueBuilder:
         tags:
             - { name: ezplatform_graphql.field_value_builder, type: 'ezpage'}
+            - { name: ezplatform_graphql.field_value_builder, type: 'ezlandingpage'}
 
     BD\PlatformPageGraphQL\GraphQL\PageResolver:
         tags:
             - { name: overblog_graphql.resolver, alias: "PageBlockAttributeType", method: "resolvePageBlockAttributeType" }
             - { name: overblog_graphql.resolver, alias: "PageBlockAttributes", method: "resolvePageBlockAttributes" }
+            - { name: overblog_graphql.resolver, alias: "PageBlockType", method: "resolvePageBlockType" }
+
+    BD\PlatformPageGraphQL\GraphQL\PageSchemaBuilder:
+        tags:
+            - {name: ezplatform_graphql.schema_builder}

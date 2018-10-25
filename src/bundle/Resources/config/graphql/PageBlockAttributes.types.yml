@@ -22,12 +22,17 @@ BasePageBlockAttribute:
             value:
                 type: String
 
+#IntegerPageBlockAttribute:
+#StringPageBlockAttribute:
+#UrlPageBlockAttribute:
+#TextPageBlockAttribute:
+
 EmbedPageBlockAttribute:
     type: object
     inherits: [BasePageBlockAttribute]
     config:
-        interfaces:
-            - PageBlockAttribute
+        interfaces: [PageBlockAttribute]
         fields:
             content:
-                type: Content
+                type: "DomainContent"
+                resolve: "@=resolver('ContentById', [value.getValue()])"

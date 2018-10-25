@@ -9,21 +9,15 @@ use eZ\Publish\Core\QueryType\QueryTypeRegistry;
 
 class PageFieldValueBuilder implements FieldValueBuilder
 {
-    public function __construct(){
-    }
-
     /**
      * @param FieldDefinition $fieldDefinition
      * @return array GraphQL definition array for the Field Value
      */
     public function buildDefinition(FieldDefinition $fieldDefinition)
     {
-        $fieldSettings = $fieldDefinition->getFieldSettings();
-
-
         return [
-            'type' => '[Page]',
-            'resolve' => 'value.page',
+            'type' => 'Page',
+            'resolve' => '@=resolver("DomainFieldValue", [value, "page"]).value.getPage()',
         ];
     }
 }
