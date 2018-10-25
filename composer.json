@@ -11,7 +11,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "ezsystems/platform-page-fieldtype": "^1.0",
+        "ezsystems/ezplatform-page-fieldtype": "^1.0",
         "bdunogier/ezplatform-graphql-bundle": "^0.3@dev"
     },
     "autoload": {
