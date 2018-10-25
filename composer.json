@@ -13,5 +13,11 @@
     "require": {
         "ezsystems/platform-page-fieldtype": "^1.0",
         "bdunogier/ezplatform-graphql-bundle": "^0.3@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "BD\\PlatformPageGraphQLBundle\\": "src/bundle",
+            "BD\\PlatformPageGraphQL\\": "src/lib"
+        }
     }
 }
