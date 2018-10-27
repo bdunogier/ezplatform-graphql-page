@@ -17,7 +17,10 @@ class PageFieldValueBuilder implements FieldValueBuilder
     {
         return [
             'type' => 'Page',
-            'resolve' => '@=resolver("DomainFieldValue", [value, "page"]).value.getPage()',
+            'resolve' => sprintf(
+                '@=resolver("DomainFieldValue", [value, "%s"]).value.getPage()',
+                $fieldDefinition->identifier
+            ),
         ];
     }
 }
