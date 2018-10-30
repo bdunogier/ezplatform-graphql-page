@@ -1,5 +1,5 @@
 <?php
-namespace BD\PlatformPageGraphQLBundle\DependencyInjection\Compiler;
+namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -11,7 +11,7 @@ use Symfony\Component\Yaml\Yaml;
  */
 class PageResolverBlocksTypesPass implements CompilerPassInterface
 {
-    const RESOLVER_ID = 'BD\PlatformPageGraphQL\GraphQL\PageResolver';
+    const RESOLVER_ID = 'BD\EzPlatformGraphQLPage\GraphQL\PageResolver';
 
     public function process(ContainerBuilder $container)
     {
