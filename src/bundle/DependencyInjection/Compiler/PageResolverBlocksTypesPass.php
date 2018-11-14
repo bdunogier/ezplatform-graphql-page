@@ -1,6 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
 
+use BD\EzPlatformGraphQLBundle\DependencyInjection\BDEzPlatformGraphQLExtension;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Finder\Finder;
@@ -19,11 +20,7 @@ class PageResolverBlocksTypesPass implements CompilerPassInterface
             return;
         }
 
-        if (!$container->hasParameter('kernel.project_dir')) {
-            return;
-        }
-
-        $pageBlocksIndexFile = $container->getParameter('kernel.project_dir') . '/src/AppBundle/Resources/config/graphql/PageBlocksList.types.yml';
+        $pageBlocksIndexFile = BDEzPlatformGraphQLExtension::SCHEMA_DIR . '/PageBlocksList.types.yml';
         if (!file_exists($pageBlocksIndexFile)) {
             return;
         }

@@ -13,6 +13,7 @@ class PageResolver
      * @var TypeResolver
      */
     private $typeResolver;
+
     /**
      * @var BlockDefinitionFactory
      */

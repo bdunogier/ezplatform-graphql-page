@@ -1,6 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
 
+use BD\EzPlatformGraphQLBundle\DependencyInjection\BDEzPlatformGraphQLExtension;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Finder\Finder;
@@ -21,24 +22,21 @@ class RegisterBlocksTypesPass implements CompilerPassInterface
             return;
         }
 
-        if (!$container->hasParameter('kernel.project_dir')) {
-            return;
-        }
-
-        $graphQLDefinitionsDirectory = $container->getParameter('kernel.project_dir') . '/src/AppBundle/Resources/config/graphql';
+        $graphQLDefinitionsDirectory = BDEzPlatformGraphQLExtension::SCHEMA_DIR;
         if (!file_exists($graphQLDefinitionsDirectory) || !is_dir($graphQLDefinitionsDirectory)) {
             return;
         }
 
         $executorDefinition = $container->getDefinition('overblog_graphql.request_executor');
         foreach ($executorDefinition->getMethodCalls() as $methodCall) {
+            // Blocks types are added to schemaBuilder::create's 4th argument
             if ($methodCall[0] === 'addSchema') {
                 $schemaDefinition = $container->getDefinition($methodCall[1][1]);
                 $types = array_merge(
                     $schemaDefinition->getArgument(4),
                     $this->getDefinedTypes($graphQLDefinitionsDirectory)
                 );
-                $schemaDefinition->setArgument(4, array_merge($types, $types));
+                $schemaDefinition->setArgument(4, $types);
             }
         }
     }
