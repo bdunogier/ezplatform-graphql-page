@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "ezsystems/ezplatform-page-fieldtype": "^1.0",
-        "bdunogier/ezplatform-graphql-bundle": "^0.3@dev"
+        "bdunogier/ezplatform-graphql-bundle": "^0.3"
     },
     "autoload": {
         "psr-4": {
