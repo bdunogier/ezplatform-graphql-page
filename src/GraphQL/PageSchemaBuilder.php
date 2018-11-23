@@ -1,7 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL;
 
-use BD\EzPlatformGraphQLBundle\Schema\SchemaBuilder;
+use BD\EzPlatformGraphQLBundle\Schema\Builder;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinitionFactory;
 use Symfony\Component\Yaml\Yaml;

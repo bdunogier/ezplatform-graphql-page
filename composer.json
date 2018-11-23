@@ -20,14 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "BD\\EzPlatformGraphQLPageBundle\\": "src/bundle",
-            "BD\\EzPlatformGraphQLPage\\": "src/lib"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "spec\\BD\\EzPlatformGraphQLPageBundle\\": "spec/bundle",
-            "spec\\BD\\EzPlatformGraphQLPage\\": "spec/lib"
+            "BD\\EzPlatformGraphQLPage\\": "src"
         }
     },
     "repositories": [
