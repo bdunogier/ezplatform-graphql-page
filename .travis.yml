@@ -13,6 +13,7 @@ env:
     - TARGET="phpspec"
 
 before_script:
+  - composer config http-basic.updates.ez.no ${EZEE_USERNAME} ${EZEE_PASSWORD}
   - COMPOSER_MEMORY_LIMIT=-1 composer install
 
 script:
