@@ -23,6 +23,11 @@
             "BD\\EzPlatformGraphQLPage\\": "src"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "spec\\BD\\EzPlatformGraphQLPage\\Tools\\": "spec/Tools"
+        }
+    },
     "repositories": [
         { "type": "composer", "url": "https://updates.ez.no/ttl" }
     ]
