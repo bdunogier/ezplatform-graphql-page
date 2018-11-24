@@ -1,16 +1,20 @@
 <?php
-
+/**
+ * This file is part of the ezplatform-graphql-page package.
+ *
+ * @copyright Copyright (C) eZ Systems AS. All rights reserved.
+ * @license For full copyright and license information view LICENSE file distributed with this source code.
+ */
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
 use BD\EzPlatformGraphQLBundle\Schema\Builder\SchemaBuilder;
 use BD\EzPlatformGraphQLBundle\Schema\Worker;
 use BD\EzPlatformGraphQLBundle\spec\Tools\TypeArgument;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BlockType;
-use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BlockWorkerBehavior;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use Prophecy\Argument;
 
-class BlockTypeSpec extends BlockWorkerBehavior
+class BlockTypeSpec extends PageWorkerBehavior
 {
     const BASE_BLOCK_TYPE = 'BasePageBlock';
     const BLOCK_INTERFACE = 'PageBlock';

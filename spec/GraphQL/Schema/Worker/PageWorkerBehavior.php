@@ -1,28 +1,30 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: bdunogier
- * Date: 24/11/2018
- * Time: 12:10
+ * This file is part of the ezplatform-graphql-page package.
+ *
+ * @copyright Copyright (C) eZ Systems AS. All rights reserved.
+ * @license For full copyright and license information view LICENSE file distributed with this source code.
  */
+namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
-
-
+use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinition;
 use PhpSpec\ObjectBehavior;
 use PhpSpec\Wrapper\Collaborator;
 use spec\BD\EzPlatformGraphQLPage\Tools\Arg;
 
-abstract class BlockWorkerBehavior extends ObjectBehavior
+abstract class PageWorkerBehavior extends ObjectBehavior
 {
     const BLOCK_IDENTIFIER = 'test';
     const BLOCK_NAME = 'Test block';
     const BLOCK_TYPE = 'TestPageBlock';
+    const BLOCK_VIEWS_TYPE = 'TestPageBlockViews';
 
     const ATTRIBUTE_IDENTIFIER = 'test_attribute';
     const ATTRIBUTE_FIELD = 'testAttribute';
+
+    const VIEW_IDENTIFIER = 'default';
 
     protected function blockDefinitionArg()
     {
@@ -37,7 +39,12 @@ abstract class BlockWorkerBehavior extends ObjectBehavior
     {
         $attribute = new BlockAttributeDefinition();
 
-        return ['BlockDefinitionAttribute' => $attribute];
+        return ['BlockAttributeDefinition' => $attribute];
+    }
+
+    protected function blockViewArg()
+    {
+        return ['BlockView' => self::VIEW_IDENTIFIER];
     }
 
     /**
@@ -48,5 +55,13 @@ abstract class BlockWorkerBehavior extends ObjectBehavior
         $nameHelper
             ->blockType(Arg\Block::withIdentifier(self::BLOCK_IDENTIFIER))
             ->willReturn(self::BLOCK_TYPE);
+
+        $nameHelper
+            ->attributeField(Arg\Attribute::withIdentifier(self::ATTRIBUTE_IDENTIFIER))
+            ->willReturn(self::ATTRIBUTE_FIELD);
+
+        $nameHelper
+            ->viewsType(Arg\Block::withIdentifier(self::BLOCK_IDENTIFIER))
+            ->willReturn(self::BLOCK_VIEWS_TYPE);
     }
 }

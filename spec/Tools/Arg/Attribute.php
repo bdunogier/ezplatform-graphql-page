@@ -1,10 +1,10 @@
 <?php
-namespace spec\BD\EzPlatformGraphQLPage\Tools\Argument;
+namespace spec\BD\EzPlatformGraphQLPage\Tools\Arg;
 
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use Prophecy\Argument\Token\CallbackToken;
 
-class AttributeArgument
+class Attribute
 {
     /**
      * @param $identifier
