@@ -4,6 +4,7 @@ services:
         autoconfigure: true
         public: false
 
+
     BD\EzPlatformGraphQLPage\GraphQL\PageFieldValueBuilder:
         tags:
             - { name: ezplatform_graphql.field_value_builder, type: 'ezpage'}
@@ -15,6 +16,3 @@ services:
             - { name: overblog_graphql.resolver, alias: "PageBlockAttributes", method: "resolvePageBlockAttributes" }
             - { name: overblog_graphql.resolver, alias: "PageBlockType", method: "resolvePageBlockType" }
 
-    BD\EzPlatformGraphQLPage\GraphQL\PageSchemaBuilder:
-        tags:
-            - {name: ezplatform_graphql.schema_builder}

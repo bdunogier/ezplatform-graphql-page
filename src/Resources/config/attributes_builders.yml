@@ -1,0 +1,9 @@
+parameters:
+    ezplatform_graphql_page.blocks_attributes:
+        integer: Int
+        string: String
+        url: String
+        text: String
+        #embed:
+        #    type: DomainContent
+        #    resolve: '@=resolver("ContentById", [value.getAttribute("%field%").getValue()])'
