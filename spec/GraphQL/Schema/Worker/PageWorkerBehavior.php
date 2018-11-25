@@ -23,6 +23,7 @@ abstract class PageWorkerBehavior extends ObjectBehavior
 
     const ATTRIBUTE_IDENTIFIER = 'test_attribute';
     const ATTRIBUTE_FIELD = 'testAttribute';
+    const ATTRIBUTE_TYPE = 'test';
 
     const VIEW_NAME = 'default';
     const VIEW_TEMPLATE = 'path/to/block_view/default.html.twig';
@@ -36,9 +37,11 @@ abstract class PageWorkerBehavior extends ObjectBehavior
         return ['BlockDefinition' => $blockDefinition];
     }
 
-    protected function blockAttributeDefinitionArg()
+    protected function blockAttributeDefinitionArg($attributType = null)
     {
         $attribute = new BlockAttributeDefinition();
+        $attribute->setIdentifier(self::ATTRIBUTE_IDENTIFIER);
+        $attribute->setType($attributType ?? self::ATTRIBUTE_TYPE);
 
         return ['BlockAttributeDefinition' => $attribute];
     }
