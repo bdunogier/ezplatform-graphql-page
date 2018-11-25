@@ -16,10 +16,10 @@ use spec\BD\EzPlatformGraphQLPage\Tools\Arg;
 
 abstract class PageWorkerBehavior extends ObjectBehavior
 {
-    const BLOCK_IDENTIFIER = 'test';
+    const BLOCK_IDENTIFIER = 'test_block';
     const BLOCK_NAME = 'Test block';
-    const BLOCK_TYPE = 'TestPageBlock';
-    const BLOCK_VIEWS_TYPE = 'TestPageBlockViews';
+    const BLOCK_TYPE = 'TestBlockPageBlock';
+    const BLOCK_VIEWS_TYPE = 'TestBlockPageBlockViews';
 
     const ATTRIBUTE_IDENTIFIER = 'test_attribute';
     const ATTRIBUTE_FIELD = 'testAttribute';
