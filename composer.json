@@ -30,5 +30,11 @@
     },
     "repositories": [
         { "type": "composer", "url": "https://updates.ez.no/ttl" }
-    ]
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-schema_refactoring": "0.2.x-dev"
+        }
+    }
+
 }
