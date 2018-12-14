@@ -1,7 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-class BaseWorker
+abstract class BaseWorker
 {
     /**
      * @var \BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper

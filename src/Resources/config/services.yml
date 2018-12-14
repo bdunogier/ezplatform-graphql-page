@@ -4,6 +4,16 @@ services:
         autoconfigure: true
         public: false
 
+    _instanceof:
+        BD\EzPlatformGraphQLBundle\Schema\Worker:
+            tags:
+                - { name: ezplatform_graphql.domain_schema_worker }
+        BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BaseWorker:
+            calls:
+                - [setNameHelper, ['@BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper']]
+
+    BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\:
+        resource: ../../GraphQL/Schema/Worker/*
 
     BD\EzPlatformGraphQLPage\GraphQL\PageFieldValueBuilder:
         tags:
@@ -16,3 +26,6 @@ services:
             - { name: overblog_graphql.resolver, alias: "PageBlockAttributes", method: "resolvePageBlockAttributes" }
             - { name: overblog_graphql.resolver, alias: "PageBlockType", method: "resolvePageBlockType" }
 
+    BD\EzPlatformGraphQLPage\GraphQL\Schema\DomainIterator:
+        tags:
+            - { name: ezplatform_graphql.schema_domain_iterator }

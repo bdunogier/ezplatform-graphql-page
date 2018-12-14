@@ -20,9 +20,6 @@ class DomainIterator implements Iterator
 
     public function init(Builder $schema)
     {
-        $schema->addType(
-            new Builder\Input\Type('PageBlocksList', 'enum')
-        );
     }
 
     public function iterate(): Generator
@@ -36,8 +33,8 @@ class DomainIterator implements Iterator
                 yield $args + ['BlockAttributeDefinition' => $attributeDefinition];
             }
 
-            foreach ($blockDefinition->getViews() as $view) {
-                yield $args + ['BlockView' => $view];
+            foreach ($blockDefinition->getViews() as $viewIdentifier => $view) {
+                yield $args + ['BlockView' => ['identifier' => $viewIdentifier] + $view];
             }
         }
     }

@@ -4,6 +4,3 @@ parameters:
         string: String
         url: String
         text: String
-        #embed:
-        #    type: DomainContent
-        #    resolve: '@=resolver("ContentById", [value.getAttribute("%field%").getValue()])'

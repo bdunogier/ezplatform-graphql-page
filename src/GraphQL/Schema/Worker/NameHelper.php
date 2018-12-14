@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: bdunogier
- * Date: 24/11/2018
- * Time: 12:27
- */
-
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
-
 
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinition;

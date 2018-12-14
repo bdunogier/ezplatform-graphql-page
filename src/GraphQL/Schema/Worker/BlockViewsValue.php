@@ -19,8 +19,11 @@ class BlockViewsValue extends BaseWorker implements Worker
         $schema->addValueToEnum(
             $this->viewsType($args),
             new Builder\Input\EnumValue(
-                $args['BlockView']['name'],
-                ['value' => $args['BlockView']['template']]
+                $args['BlockView']['identifier'],
+                [
+                    'value' => $args['BlockView']['template'],
+                    'description' => $args['BlockView']['name'],
+                ]
             )
         );
     }
