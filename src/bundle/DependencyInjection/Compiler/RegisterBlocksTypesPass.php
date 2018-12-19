@@ -1,7 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
 
-use BD\EzPlatformGraphQLBundle\DependencyInjection\BDEzPlatformGraphQLExtension;
+use EzSystems\EzPlatformGraphQL\DependencyInjection\EzSystemsEzPlatformGraphQLExtension;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Finder\Finder;
@@ -22,7 +22,7 @@ class RegisterBlocksTypesPass implements CompilerPassInterface
             return;
         }
 
-        $graphQLDefinitionsDirectory = BDEzPlatformGraphQLExtension::SCHEMA_DIR;
+        $graphQLDefinitionsDirectory = EzSystemsEzPlatformGraphQLExtension::SCHEMA_DIR;
         if (!file_exists($graphQLDefinitionsDirectory) || !is_dir($graphQLDefinitionsDirectory)) {
             return;
         }

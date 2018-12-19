@@ -1,10 +1,9 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL;
 
-use BD\EzPlatformGraphQLBundle\Schema\SchemaBuilder;
+use EzSystems\EzPlatformGraphQL\Schema\SchemaBuilder;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinitionFactory;
-use Symfony\Component\Yaml\Yaml;
 
 class PageSchemaBuilder implements SchemaBuilder
 {

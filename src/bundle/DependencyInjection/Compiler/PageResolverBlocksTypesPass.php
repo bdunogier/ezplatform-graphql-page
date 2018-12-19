@@ -1,10 +1,10 @@
 <?php
 namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
 
-use BD\EzPlatformGraphQLBundle\DependencyInjection\BDEzPlatformGraphQLExtension;
+use BD\EzPlatformGraphQLPage\GraphQL\PageResolver;
+use EzSystems\EzPlatformGraphQL\DependencyInjection\EzSystemsEzPlatformGraphQLExtension;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Finder\Finder;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -12,7 +12,7 @@ use Symfony\Component\Yaml\Yaml;
  */
 class PageResolverBlocksTypesPass implements CompilerPassInterface
 {
-    const RESOLVER_ID = 'BD\EzPlatformGraphQLPage\GraphQL\PageResolver';
+    const RESOLVER_ID = PageResolver::class;
 
     public function process(ContainerBuilder $container)
     {
@@ -20,7 +20,7 @@ class PageResolverBlocksTypesPass implements CompilerPassInterface
             return;
         }
 
-        $pageBlocksIndexFile = BDEzPlatformGraphQLExtension::SCHEMA_DIR . '/PageBlocksList.types.yml';
+        $pageBlocksIndexFile = EzSystemsEzPlatformGraphQLExtension::SCHEMA_DIR . '/PageBlocksList.types.yml';
         if (!file_exists($pageBlocksIndexFile)) {
             return;
         }
