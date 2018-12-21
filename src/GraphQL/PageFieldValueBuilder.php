@@ -1,7 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL;
 
-use BD\EzPlatformGraphQLBundle\Schema\Domain\Content\FieldValueBuilder\FieldValueBuilder;
+use EzSystems\EzPlatformGraphQL\DomainContent\FieldValueBuilder\FieldValueBuilder;
 use eZ\Publish\API\Repository\Values\ContentType\FieldDefinition;
 
 class PageFieldValueBuilder implements FieldValueBuilder
