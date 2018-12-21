@@ -8,7 +8,7 @@
 
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 
-use BD\EzPlatformGraphQLBundle\Schema;
+use EzSystems\EzPlatformGraphQL\Schema;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;

@@ -7,9 +7,9 @@
  */
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder\SchemaBuilder;
-use BD\EzPlatformGraphQLBundle\Schema\Worker;
-use BD\EzPlatformGraphQLBundle\spec\Tools\EnumValueArgument;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\SchemaBuilder;
+use EzSystems\EzPlatformGraphQL\Schema\Worker;
+use spec\EzSystems\EzPlatformGraphQL\Tools\EnumValueArgument;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BlockViewsValue;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use Prophecy\Argument;
@@ -44,7 +44,7 @@ class BlockViewsValueSpec extends PageWorkerBehavior
             ->addValueToEnum(
                 self::BLOCK_VIEWS_TYPE,
                 Argument::allOf(
-                    EnumValueArgument::withName(self::VIEW_NAME),
+                    EnumValueArgument::withName(self::VIEW_IDENTIFIER),
                     EnumValueArgument::withValue(self::VIEW_TEMPLATE)
                 )
             )

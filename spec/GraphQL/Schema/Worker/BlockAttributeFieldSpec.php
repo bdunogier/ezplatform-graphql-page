@@ -7,9 +7,9 @@
  */
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder\Input;
-use BD\EzPlatformGraphQLBundle\Schema\Builder\SchemaBuilder;
-use BD\EzPlatformGraphQLBundle\Schema\Worker;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\Input;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\SchemaBuilder;
+use EzSystems\EzPlatformGraphQL\Schema\Worker;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BlockAttributeField;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;

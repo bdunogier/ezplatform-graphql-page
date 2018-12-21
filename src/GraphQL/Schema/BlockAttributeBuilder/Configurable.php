@@ -1,7 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder\Input;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\Input;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;

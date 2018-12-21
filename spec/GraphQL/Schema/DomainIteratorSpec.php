@@ -1,7 +1,7 @@
 <?php
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema;
 
-use BD\EzPlatformGraphQLBundle\Schema\Domain\Iterator;
+use EzSystems\EzPlatformGraphQL\Schema\Domain\Iterator;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\DomainIterator;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinition;

@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.1",
         "ezsystems/ezplatform-page-fieldtype": "^1.0",
-        "bdunogier/ezplatform-graphql-bundle": "^0.4@dev"
+        "ezsystems/ezplatform-graphql": "^0.4@dev"
     },
     "require-dev": {
         "phpspec/phpspec": "^5.1"
@@ -25,7 +25,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "spec\\BD\\EzPlatformGraphQLPage\\": "spec"
+            "spec\\BD\\EzPlatformGraphQLPage\\": "spec",
+            "spec\\EzSystems\\EzPlatformGraphQL\\Tools\\": "vendor/ezsystems/ezplatform-graphql/spec/Tools"
         }
     },
     "repositories": [

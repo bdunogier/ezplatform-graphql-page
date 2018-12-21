@@ -25,7 +25,8 @@ abstract class PageWorkerBehavior extends ObjectBehavior
     const ATTRIBUTE_FIELD = 'testAttribute';
     const ATTRIBUTE_TYPE = 'test';
 
-    const VIEW_NAME = 'default';
+    const VIEW_IDENTIFIER = 'default';
+    const VIEW_NAME = 'Default view';
     const VIEW_TEMPLATE = 'path/to/block_view/default.html.twig';
 
     protected function blockDefinitionArg()
@@ -51,6 +52,7 @@ abstract class PageWorkerBehavior extends ObjectBehavior
         return [
             'BlockView' => [
                 'name' => self::VIEW_NAME,
+                'identifier' => self::VIEW_IDENTIFIER,
                 'template' => self::VIEW_TEMPLATE
             ]
         ];

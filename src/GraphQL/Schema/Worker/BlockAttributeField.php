@@ -8,8 +8,8 @@
 
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder;
-use BD\EzPlatformGraphQLBundle\Schema\Worker;
+use EzSystems\EzPlatformGraphQL\Schema\Builder;
+use EzSystems\EzPlatformGraphQL\Schema\Worker;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinition;

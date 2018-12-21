@@ -1,8 +1,8 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder;
-use BD\EzPlatformGraphQLBundle\Schema\Domain\Iterator;
+use EzSystems\EzPlatformGraphQL\Schema\Builder;
+use EzSystems\EzPlatformGraphQL\Schema\Domain\Iterator;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinitionFactory;
 use Generator;
 

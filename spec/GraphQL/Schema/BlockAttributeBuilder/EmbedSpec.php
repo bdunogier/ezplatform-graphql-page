@@ -2,7 +2,7 @@
 
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder\Input;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\Input;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder\Embed;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;

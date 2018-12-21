@@ -7,11 +7,11 @@
  */
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder\SchemaBuilder;
-use BD\EzPlatformGraphQLBundle\Schema\Worker;
-use BD\EzPlatformGraphQLBundle\spec\Tools\EnumValueArgument;
-use BD\EzPlatformGraphQLBundle\spec\Tools\Stubs\InitializableWorker;
-use BD\EzPlatformGraphQLBundle\spec\Tools\TypeArgument;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\SchemaBuilder;
+use EzSystems\EzPlatformGraphQL\Schema\Worker;
+use EzSystems\EzPlatformGraphQL\Schema\Initializer;
+use spec\EzSystems\EzPlatformGraphQL\Tools\EnumValueArgument;
+use spec\EzSystems\EzPlatformGraphQL\Tools\TypeArgument;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BlocksIndex;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use Prophecy\Argument;
@@ -30,7 +30,7 @@ class BlocksIndexSpec extends PageWorkerBehavior
     {
         $this->shouldHaveType(BlocksIndex::class);
         $this->shouldHaveType(Worker::class);
-        $this->shouldHaveType(InitializableWorker::class);
+        $this->shouldHaveType(Initializer::class);
     }
 
     function it_initializes_the_BlocksIndex_enum(SchemaBuilder $schema)

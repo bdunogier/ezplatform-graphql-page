@@ -7,9 +7,9 @@
  */
 namespace spec\BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder\SchemaBuilder;
-use BD\EzPlatformGraphQLBundle\Schema\Worker;
-use BD\EzPlatformGraphQLBundle\spec\Tools\TypeArgument;
+use EzSystems\EzPlatformGraphQL\Schema\Builder\SchemaBuilder;
+use EzSystems\EzPlatformGraphQL\Schema\Worker;
+use spec\EzSystems\EzPlatformGraphQL\Tools\TypeArgument;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BlockType;
 use BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\NameHelper;
 use Prophecy\Argument;

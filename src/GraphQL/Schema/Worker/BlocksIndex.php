@@ -8,12 +8,12 @@
 
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker;
 
-use BD\EzPlatformGraphQLBundle\Schema\Builder;
-use BD\EzPlatformGraphQLBundle\Schema\Worker;
-use BD\EzPlatformGraphQLBundle\spec\Tools\Stubs\InitializableWorker;
+use EzSystems\EzPlatformGraphQL\Schema\Builder;
+use EzSystems\EzPlatformGraphQL\Schema\Worker;
+use EzSystems\EzPlatformGraphQL\Schema\Initializer;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinition;
 
-class BlocksIndex extends BaseWorker implements Worker, InitializableWorker
+class BlocksIndex extends BaseWorker implements Worker, Initializer
 {
     const ENUM_TYPE = 'PageBlocksList';
 

@@ -1,7 +1,7 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL\Schema;
 
-use BD\EzPlatformGraphQLBundle\Schema;
+use EzSystems\EzPlatformGraphQL\Schema;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 
 interface BlockAttributeBuilder

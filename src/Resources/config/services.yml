@@ -5,7 +5,7 @@ services:
         public: false
 
     _instanceof:
-        BD\EzPlatformGraphQLBundle\Schema\Worker:
+        EzSystems\EzPlatformGraphQL\Schema\Worker:
             tags:
                 - { name: ezplatform_graphql.domain_schema_worker }
         BD\EzPlatformGraphQLPage\GraphQL\Schema\Worker\BaseWorker:
