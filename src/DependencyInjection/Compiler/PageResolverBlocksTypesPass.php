@@ -1,5 +1,5 @@
 <?php
-namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
+namespace BD\EzPlatformGraphQLPage\DependencyInjection\Compiler;
 
 use BD\EzPlatformGraphQLPage\GraphQL\PageResolver;
 use EzSystems\EzPlatformGraphQL\DependencyInjection\EzSystemsEzPlatformGraphQLExtension;

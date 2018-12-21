@@ -1,5 +1,5 @@
 <?php
-namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
+namespace BD\EzPlatformGraphQLPage\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

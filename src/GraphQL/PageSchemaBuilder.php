@@ -1,11 +1,11 @@
 <?php
 namespace BD\EzPlatformGraphQLPage\GraphQL;
 
-use EzSystems\EzPlatformGraphQL\Schema\SchemaBuilder;
+use EzSystems\EzPlatformGraphQL\Schema\Builder;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockAttributeDefinition;
 use EzSystems\EzPlatformPageFieldType\FieldType\Page\Block\Definition\BlockDefinitionFactory;
 
-class PageSchemaBuilder implements SchemaBuilder
+class PageSchemaBuilder implements Builder
 {
     /**
      * @var BlockDefinitionFactory

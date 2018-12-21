@@ -1,0 +1,23 @@
+language: php
+
+php:
+  - 7.1
+
+branches:
+  only:
+    - master
+    - dev
+
+env:
+  matrix:
+    - TARGET="phpspec"
+
+before_script:
+  - composer config http-basic.updates.ez.no ${EZEE_USERNAME} ${EZEE_PASSWORD}
+  - COMPOSER_MEMORY_LIMIT=-1 composer install
+
+script:
+  - if [ "$TARGET" == "phpspec" ] ; then ./vendor/bin/phpspec run --format=pretty; fi
+
+notification:
+  email: false

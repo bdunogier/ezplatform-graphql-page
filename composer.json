@@ -11,13 +11,24 @@
     ],
     "minimum-stability": "stable",
     "require": {
+        "php": ">=7.1",
         "ezsystems/ezplatform-page-fieldtype": "^1.0",
-        "bdunogier/ezplatform-graphql-bundle": "^0.3@dev"
+        "bdunogier/ezplatform-graphql-bundle": "^0.4@dev"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^5.1"
     },
     "autoload": {
         "psr-4": {
-            "BD\\EzPlatformGraphQLPageBundle\\": "src/bundle",
-            "BD\\EzPlatformGraphQLPage\\": "src/lib"
+            "BD\\EzPlatformGraphQLPage\\": "src"
+        }
+    },
+    "repositories": [
+        { "type": "composer", "url": "https://updates.ez.no/ttl" }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2.x-dev"
         }
     }
 }

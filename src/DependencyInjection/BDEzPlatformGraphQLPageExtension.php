@@ -1,6 +1,6 @@
 <?php
 
-namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection;
+namespace BD\EzPlatformGraphQLPage\DependencyInjection;
 
 use EzSystems\EzPlatformGraphQL\DomainContent\FieldValueBuilder\FieldValueBuilder;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

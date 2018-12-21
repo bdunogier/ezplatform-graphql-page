@@ -1,6 +1,6 @@
 <?php
 
-namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection;
+namespace BD\EzPlatformGraphQLPage\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

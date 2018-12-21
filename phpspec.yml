@@ -1,0 +1,4 @@
+suites:
+  default:
+    psr4_prefix: BD\EzPlatformGraphQLPage
+    namespace: BD\EzPlatformGraphQLPage

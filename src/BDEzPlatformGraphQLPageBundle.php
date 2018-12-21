@@ -1,8 +1,7 @@
 <?php
+namespace BD\EzPlatformGraphQLPage;
 
-namespace BD\EzPlatformGraphQLPageBundle;
-
-use BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
+use BD\EzPlatformGraphQLPage\DependencyInjection\Compiler;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

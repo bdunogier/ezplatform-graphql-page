@@ -1,5 +1,5 @@
 <?php
-namespace BD\EzPlatformGraphQLPageBundle\DependencyInjection\Compiler;
+namespace BD\EzPlatformGraphQLPage\DependencyInjection\Compiler;
 
 use EzSystems\EzPlatformGraphQL\DependencyInjection\EzSystemsEzPlatformGraphQLExtension;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
