@@ -13,7 +13,7 @@
     "require": {
         "php": ">=7.1",
         "ezsystems/ezplatform-page-fieldtype": "^1.0",
-        "ezsystems/ezplatform-graphql": "0.4.0-beta1"
+        "ezsystems/ezplatform-graphql": "^0.4.0@beta"
     },
     "require-dev": {
         "phpspec/phpspec": "^5.1"
