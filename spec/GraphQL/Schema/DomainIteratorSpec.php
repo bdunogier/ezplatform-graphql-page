@@ -55,14 +55,17 @@ class DomainIteratorSpec extends ObjectBehavior
     function it_yields_views_for_each_BlockDefinition(BlockDefinitionFactory $blockDefinitionFactory)
     {
         $blockDefinition = new BlockDefinition();
-        $blockDefinition->setViews(['view1', 'view2']);
+        $blockDefinition->setViews([
+            'default' => ['template' => 'ezdesign/blocks/test/default.html.twig', 'name' => 'Default'],
+            'custom' => ['template' => 'ezdesign/blocks/test/custom.html.twig', 'name' => 'Custom']
+        ]);
         $blockDefinitionFactory->getBlockIdentifiers()->willReturn(['block']);
         $blockDefinitionFactory->getBlockDefinition('block')->willReturn($blockDefinition);
 
         $this->iterate()->shouldYieldLike([
             ['BlockDefinition' => $blockDefinition],
-            ['BlockDefinition' => $blockDefinition, 'BlockView' => 'view1'],
-            ['BlockDefinition' => $blockDefinition, 'BlockView' => 'view2'],
+            ['BlockDefinition' => $blockDefinition, 'BlockView' => ['identifier' => 'default', 'template' => 'ezdesign/blocks/test/default.html.twig', 'name' => 'Default']],
+            ['BlockDefinition' => $blockDefinition, 'BlockView' => ['identifier' => 'custom', 'template' => 'ezdesign/blocks/test/custom.html.twig', 'name' => 'Custom']],
         ]);
     }
 }
