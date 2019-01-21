@@ -4,3 +4,13 @@ parameters:
         string: String
         url: String
         text: String
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    BD\EzPlatformGraphQLPage\GraphQL\Schema\BlockAttributeBuilder\Embed:
+        tags:
+            - {name: ezplatform_graphql_page.block_attribute_builder, type: embed}
