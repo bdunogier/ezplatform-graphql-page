@@ -16,14 +16,23 @@ class RegisterBlocksTypesPass implements CompilerPassInterface
 {
     const TYPES_PATTERN = '[A-Z]*PageBlock.types.yml';
 
+    /**
+     * The directory where the ezplatform graphql schema is defined.
+     */
+    private $schemaDir;
+
+    public function __construct($schemaDir)
+    {
+        $this->schemaDir = $schemaDir;
+    }
+
     public function process(ContainerBuilder $container)
     {
         if (!$container->has('overblog_graphql.request_executor')) {
             return;
         }
 
-        $graphQLDefinitionsDirectory = EzSystemsEzPlatformGraphQLExtension::SCHEMA_DIR;
-        if (!file_exists($graphQLDefinitionsDirectory) || !is_dir($graphQLDefinitionsDirectory)) {
+        if (!file_exists($this->schemaDir) || !is_dir($this->schemaDir)) {
             return;
         }
 
@@ -34,7 +43,7 @@ class RegisterBlocksTypesPass implements CompilerPassInterface
                 $schemaDefinition = $container->getDefinition($methodCall[1][1]);
                 $types = array_merge(
                     $schemaDefinition->getArgument(4),
-                    $this->getDefinedTypes($graphQLDefinitionsDirectory)
+                    $this->getDefinedTypes($this->schemaDir)
                 );
                 $schemaDefinition->setArgument(4, $types);
             }

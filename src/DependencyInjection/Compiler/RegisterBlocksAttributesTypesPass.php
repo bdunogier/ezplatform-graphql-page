@@ -3,7 +3,6 @@ namespace BD\EzPlatformGraphQLPage\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Finder\Finder;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -13,11 +12,20 @@ use Symfony\Component\Yaml\Yaml;
  */
 class RegisterBlocksAttributesTypesPass implements CompilerPassInterface
 {
-    const ATTRIBUTES_YAML = __DIR__ . '/../../Resources/config/graphql/PageBlockAttributes.types.yml';
+    private $blocksAttributesIndexFile;
+
+    public function __construct($schemaDir)
+    {
+        $this->blocksAttributesIndexFile = $schemaDir . '/PageBlocksList.types.yml';
+    }
 
     public function process(ContainerBuilder $container)
     {
         if (!$container->has('overblog_graphql.request_executor')) {
+            return;
+        }
+
+        if (!file_exists($this->blocksAttributesIndexFile)) {
             return;
         }
 
@@ -38,6 +46,6 @@ class RegisterBlocksAttributesTypesPass implements CompilerPassInterface
      */
     private function getDefinedTypes()
     {
-        return array_keys(Yaml::parseFile(self::ATTRIBUTES_YAML));
+        return array_keys(Yaml::parseFile($this->blocksAttributesIndexFile));
     }
 }
