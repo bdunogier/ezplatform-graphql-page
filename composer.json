@@ -1,5 +1,5 @@
 {
-    "name": "bdunogier/ezplatform-graphql-page",
+    "name": "ezsystems/ezplatform-graphql-page",
     "description": "GraphQL integration of the eZ Platform Page feature",
     "type": "ezplatform-bundle",
     "license": "GPL-2.0",

@@ -9,12 +9,12 @@ Add the package to `composer.json`:
 ```json
 {   
     "repositories": [
-        {"type": "git", "url": "https://github.com/bdunogier/ezplatform-graphql-page.git"},
-    ]
+        {"type": "git", "url": "https://github.com/ezsystems/ezplatform-graphql-page.git"}
+    ],
     "require": {
-	    "bdunogier/ezplatform-graphql-page": "dev-master",
+	    "ezsystems/ezplatform-graphql-page": "dev-master"
 	}
-},
+}
 ```
 
 Enable the bundle in `app/AppKernel.php`:
@@ -34,7 +34,7 @@ Update the dependencies, and regenerate the graphql schema:
 
 ```bash
 composer update
-php bin/console bd:platform-graphql:generate-domain-schema
+php bin/console ezplatform:graphql:generate
 ```
 
 ## Features
